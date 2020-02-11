@@ -1,0 +1,21 @@
+Feature:
+  As an Outlook user
+  I want to be able to successfully log in
+  So that I am able to use ma mailbox
+
+  Scenario: Sign in navigation
+    Given a web browser is opened in login page
+    When a user clicks on the sign in button
+    Then sign in page opens
+
+  Scenario: Provide user login
+    Given sign in page opens
+    When user provides username
+    And clicks on next button
+    Then password page opens
+
+  Scenario: Provide password
+    Given password page opens
+    When user provides password
+    And clicks on sign in button
+    Then user is successfully logged in
